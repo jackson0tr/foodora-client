@@ -4,7 +4,7 @@ import { Separator } from "@/components/ui/separator";
 import { LoginInputState, userLoginSchema } from "@/schema/userSchema";
 import { useThemeStore } from "@/store/useThemeStore";
 import { useUserStore } from "@/store/useUserStore";
-import { Loader2, LockKeyhole, Mail } from "lucide-react";
+import { LockKeyhole, Mail } from "lucide-react";
 import { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useNavigate } from "react-router-dom";
@@ -24,7 +24,7 @@ const Login = () => {
     password: "",
   });
   const [errors, setErrors] = useState<Partial<LoginInputState>>({});
-  const { loading, login } = useUserStore();
+  const { login } = useUserStore();
   const navigate = useNavigate();
   const { theme } = useThemeStore();
   const { t, i18n } = useTranslation();
@@ -129,18 +129,18 @@ const Login = () => {
           </div>
         </div>
         <div className="mb-10">
-          {loading ? (
+          {/* {loading ? (
             <Button disabled className="w-full bg-orange hover:bg-hoverOrange">
               <Loader2 className="mr-2 h-4 w-4 animate-spin" /> {t("please wait")}
             </Button>
-          ) : (
+          ) : ( */}
             <Button
               type="submit"
               className="w-full bg-orange hover:bg-hoverOrange"
             >
               {t("login")}
             </Button>
-          )}
+          {/* )} */}
           <div className="mt-4">
             <Link
               to="/forgot-password"
