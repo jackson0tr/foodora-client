@@ -17,7 +17,7 @@ import Success from "./components/Success";
 import { useUserStore } from "./store/useUserStore";
 import { Navigate } from "react-router-dom";
 import { useEffect } from "react";
-import Loading from "./components/Loading";
+// import Loading from "./components/Loading";
 import { useThemeStore } from "./store/useThemeStore";
 
 const ProtectedRoutes = ({ children }: { children: React.ReactNode }) => {
