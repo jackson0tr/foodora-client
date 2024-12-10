@@ -297,7 +297,7 @@ const MobileNavbar = () => {
             <ShoppingCart />
             <span>{t("cart")} (0)</span>
           </Link>
-          {user?.admin && (
+          {user?.admin && isAuthenticated ? (
             <>
               <Link
                 to="/admin/menu"
@@ -321,7 +321,7 @@ const MobileNavbar = () => {
                 <span>{t("restaurant orders")}</span>
               </Link>
             </>
-          )}
+          ): ""}
         </SheetDescription>
         <SheetFooter className="flex flex-col gap-4">
           <div className="flex flex-row items-center gap-2">
