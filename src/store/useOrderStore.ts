@@ -4,8 +4,8 @@ import { create } from "zustand";
 import { createJSONStorage, persist } from "zustand/middleware";
 
 // const API_END_POINT: string = "http://localhost:3000/api/v1/order";
-// const API_END_POINT: string = "https://foodora-cx0a.onrender.com/api/v1/order";
-const API_END_POINT: string = "https://foodora-server.vercel.app/api/v1/order";
+const API_END_POINT: string = "https://foodora-cx0a.onrender.com/api/v1/order";
+// const API_END_POINT: string = "https://foodora-server.vercel.app/api/v1/order";
 axios.defaults.withCredentials = true;
 
 export const useOrderStore = create<OrderState>()(persist((set => ({
