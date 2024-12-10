@@ -5,7 +5,8 @@ import { LoginInputState, SignupInputState } from "@/schema/userSchema";
 import { toast } from "sonner";
 
 // const API_END_POINT = "http://localhost:3000/api/v1/user"
-const API_END_POINT = "https://foodora-cx0a.onrender.com/api/v1/user"
+// const API_END_POINT = "https://foodora-cx0a.onrender.com/api/v1/user"
+const API_END_POINT = "https://foodora-server.vercel.app/api/v1/user"
 axios.defaults.withCredentials = true;
 
 type User = {

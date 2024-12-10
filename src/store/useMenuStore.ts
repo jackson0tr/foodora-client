@@ -5,7 +5,8 @@ import { createJSONStorage, persist } from "zustand/middleware";
 import { useRestaurantStore } from "./useRestaurantStore";
 
 // const API_END_POINT = "http://localhost:3000/api/v1/menu";
-const API_END_POINT = "https://foodora-cx0a.onrender.com/api/v1/menu";
+// const API_END_POINT = "https://foodora-cx0a.onrender.com/api/v1/menu";
+const API_END_POINT = "https://foodora-server.vercel.app/api/v1/menu";
 axios.defaults.withCredentials = true;
 
 type MenuState = {
