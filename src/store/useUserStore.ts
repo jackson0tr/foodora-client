@@ -39,7 +39,7 @@ type UserState = {
 export const useUserStore = create<UserState>()(persist((set) => ({
     user: null,
     isAuthenticated: false,
-    isCheckingAuth: false,
+    isCheckingAuth: true,
     loading: false,
     // signup api implementation
     signup: async (input: SignupInputState) => {
@@ -100,9 +100,7 @@ export const useUserStore = create<UserState>()(persist((set) => ({
             if (response.data.success) {
                 set({user: response.data.user, isAuthenticated: true, isCheckingAuth: false });
             }
-        } catch (error: any) {
-            toast.success(error.response.data.message);
-            // set({ loading: false });
+        } catch (error) {
             set({isAuthenticated: false, isCheckingAuth: false });
         }
     },

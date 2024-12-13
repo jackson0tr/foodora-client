@@ -125,13 +125,13 @@ const appRouter = createBrowserRouter([
 function App() {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const initializeTheme = useThemeStore((state:any) => state.initializeTheme);
-  // const {checkAuthentication, isCheckingAuth} = useUserStore();
+  const {checkAuthentication} = useUserStore();
   // checking auth every time when page is loaded
   useEffect(()=>{
-    // checkAuthentication();
+    checkAuthentication();
     initializeTheme();
-  },[])
-  // },[checkAuthentication])
+  // },[])
+  },[checkAuthentication])
 
   // if(isCheckingAuth) return <Loading/>
   return (
